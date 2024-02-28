@@ -1,7 +1,5 @@
 package com.spring.shop.shop.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.experimental.Accessors;

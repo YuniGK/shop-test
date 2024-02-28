@@ -1,17 +1,17 @@
 package com.spring.shop.shop.domain;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 
 @Getter
 @Table(name = "customers")
-@NoArgsConstructor(AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Customer {
     @Id
-    private Long customerId;
+    private int customerId;
 
     @Column
     private String name;
@@ -22,7 +22,13 @@ public class Customer {
     @Column
     private String phneNumber;
 
-    public static Customer newCustomer(String name, String address, String phneNumber){
-        return new Customer(name, address, phneNumber);
+    public Customer(String name, String address, String phneNumber) {
+        this.name = name;
+        this.address = address;
+        this.phneNumber = phneNumber;
+    }
+
+    public static Customer newCustomer(CreateCustomer customer){
+        return new Customer(customer.getName(), customer.getAddress(), customer.getPhneNumber());
     }
 }
