@@ -24,8 +24,8 @@ jpa:
   sql:
     init:
       mode: always
-      #schem-localtions: 'classpath:data/schema.sql'
-      data-localtions: 'classpath:data/data.sql'
+      schema-locations: 'classpath:data/schema.sql'
+      data-locations: 'classpath:data/data.sql'
   data.rest:
     base-path: /api
     detection-strategy: ANNOTATED
