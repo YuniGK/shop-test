@@ -1,6 +1,9 @@
 debug: false
 management.endpoints.web.exposure.include: "*"
 
+server:
+  port : 8090
+
 logging:
   level:
     com.spring.shop.shop: debug
