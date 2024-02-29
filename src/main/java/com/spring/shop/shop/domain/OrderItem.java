@@ -17,13 +17,13 @@ public class OrderItem {
     private int orderItemId;
 
     @Column
-    private int productId;
+    private int orderId;
 
     @Column
     private int orderQuantity;
 
-    public OrderItem(int productId, int orderQuantity) {
-        this.productId = productId;
+    public OrderItem(int orderId, int orderQuantity) {
+        this.orderId = orderId;
         this.orderQuantity = orderQuantity;
     }
 }

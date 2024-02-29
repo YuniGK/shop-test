@@ -7,7 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.rest.webmvc.support.BackendId;
+
+import java.math.BigDecimal;
 
 @Getter
 @Table(name = "products")
@@ -24,6 +25,6 @@ public class Product {
     private String description;
 
     @Column
-    private BackendId price;
+    private BigDecimal price;
 
 }

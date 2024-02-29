@@ -1,9 +1,11 @@
 package com.spring.shop.shop.domain;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import jakarta.persistence.Table;
-import lombok.*;
 
 @Getter
 @Table(name = "customers")

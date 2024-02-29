@@ -2,12 +2,12 @@ package com.spring.shop.shop.domain;
 
 import jakarta.persistence.Column;
 import org.springframework.data.annotation.Id;
-import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;

@@ -3,7 +3,7 @@ management.endpoints.web.exposure.include: "*"
 
 logging:
   level:
-    yun.jung.kim.Host_Api: debug
+    com.spring.shop.shop: debug
     org.springframework.web.servlet: debug
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
@@ -29,3 +29,8 @@ jpa:
   data.rest:
     base-path: /api
     detection-strategy: ANNOTATED
+
+  security:
+    user:
+      name: root
+      password: root
