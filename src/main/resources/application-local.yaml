@@ -1,14 +1,5 @@
-debug: false
-management.endpoints.web.exposure.include: "*"
-
 server:
   port : 8090
-
-logging:
-  level:
-    com.spring.shop.shop: debug
-    org.springframework.web.servlet: debug
-    org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 spring:
   datasource:
@@ -16,24 +7,8 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-jpa:
-  defer-datasource-initialization: true
-  hibernate.ddl-auto: create
-  show-sql: true
-  properties:
-    hibernate:
-      format_sql: true
-      default_batch_fetch_size: 100
   sql:
     init:
       mode: always
       schema-locations: 'classpath:data/schema.sql'
       data-locations: 'classpath:data/data.sql'
-  data.rest:
-    base-path: /api
-    detection-strategy: ANNOTATED
-
-  security:
-    user:
-      name: root
-      password: root
