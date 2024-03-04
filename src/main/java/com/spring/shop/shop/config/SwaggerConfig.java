@@ -20,7 +20,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
     private static final String SERVICE_NAME = "shop";
     private static final String API_VERSION = "V1";
     private static final String API_DESCRIPTION = "shop API TEST";
-    private static final String API_URL = "http://localhost:8080/";
+    private static final String API_URL = "http://localhost:8090/";
 
     @Bean
     public Docket api() {

@@ -1,5 +1,14 @@
+debug: false
+management.endpoints.web.exposure.include: "*"
+
 server:
   port : 8090
+
+logging:
+  level:
+    com.spring.shop: debug
+    org.springframework.web.servlet: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
 
 spring:
   datasource:
@@ -12,3 +21,19 @@ spring:
       mode: always
       schema-locations: 'classpath:data/schema.sql'
       data-locations: 'classpath:data/data.sql'
+
+  jpa:
+    database: mysql
+    #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    defer-datasource-initialization: true
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+  data.rest:
+    base-path: /api
+    detection-strategy: ANNOTATED

@@ -15,14 +15,14 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 public class StoreProduct {
     @Id
-    private String storeProductId;
+    private int storeProductId;
 
     @Column
-    private String storeId;
+    private int storeId;
 
     @Column
-    private String productId;
+    private int productId;
 
     @Column
-    private String stockQuantity;
+    private int stockQuantity;
 }
